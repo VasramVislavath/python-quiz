@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐍 Python Quiz</h1>
+        <h3>select topic for quize</h3>
+
+        <!-- Topic Selection -->
+        <div class="topic-container" id="topicContainer">
+            <button class="topic-button" onclick="selectTopic('Basics and Fundamentals')">Basics and Fundamentals</button>
+            <button class="topic-button" onclick="selectTopic('Control Flow Loops')">Control Flow Loops</button>
+            <button class="topic-button" onclick="selectTopic('Functions & Modules')">Functions & Modules</button>
+            <button class="topic-button" onclick="selectTopic('Data Structures')">Data Structures</button>
+            <button class="topic-button" onclick="selectTopic('Object-Oriented Programming (OOP)')">Object-Oriented Programming (OOP)</button>
+            <button class="topic-button" onclick="selectTopic('error-Handling')">error-Handling</button>
+            <button class="topic-button" onclick="selectTopic('file-Handling')">file-Handling</button>
+            <button class="topic-button" onclick="selectTopic('error-Handling')">error-Handling</button>
+            <button class="topic-button" onclick="selectTopic('advanced-Topics')">advanced-Topics</button>
+            <button class="topic-button" onclick="selectTopic('python-Libraries')">python-Libraries</button>
+            <button class="topic-button" onclick="selectTopic('Python Best Practices & Tools')">Python Best Practices & Tools</button>
+            <button class="topic-button" onclick="selectTopic('python3-Features')">python3-Features</button>
+        </div>
+
+        <!-- Quiz Area -->
+        <div id="quizContainer"></div>
+
+        <!-- Navigation Buttons (hidden initially) -->
+        <div class="btn-container" id="btnContainer" style="display: none;">
+            <button class="btn" id="previousBtn" onclick="navigate(-1)">Previous</button>
+            <button class="btn" id="nextBtn" onclick="navigate(1)">Next</button>
+            <button class="btn" id="hintBtn" onclick="toggleHint()">Show Hint</button>
+            <button class="btn back-btn" id="backBtn" onclick="goBack()">Back</button>
+        </div>
+
+        <!-- Quiz Count -->
+        <div class="quiz-count" id="quizCount" style="display: none;">
+            Question <span id="currentQuestionIndex"></span> of <span id="totalQuestions"></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
